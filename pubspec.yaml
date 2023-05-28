@@ -1,0 +1,70 @@
+name: when_does_optic_play
+description: A new Flutter project.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: none # Remove this line if you wish to publish to pub.dev
+
+
+version: 2.0.0+1
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.3
+  http: ^0.13.4
+  flutter_local_notifications: ^13.0.0
+  envied: ^0.3.0
+  flutter_dotenv: ^5.0.2
+  firebase_core: ^2.7.0
+  firebase_messaging: ^14.2.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  url_launcher: ^6.0.3  # Add this line
+  intl: ^0.17.0
+  envied_generator: ^0.3.0
+  build_runner: ^2.3.3
+  # google_mobile_ads: ^2.3.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  fonts:
+    - family: MyCustomFont
+      fonts:
+        - asset: fonts/Optic.ttf
+        - asset: fonts/Kanit-MediumItalic.ttf
+  uses-material-design: true
+  assets:
+    - assets/background-test.jpg
+    - assets/twitch.png
+    - assets/
+    - .env
+
+          #     // Align(
+          # //   alignment: Alignment.center,
+          # //   child: Transform.translate(
+          # //     offset: Offset(0, -207),
+          # //     child: Text(
+          # //       '7:00PM EST\n6:00PM CST\n4:00pm PST',
+          # //       style: TextStyle(
+          # //         fontSize: 18,
+          # //         color: Colors.white,
+          # //         fontWeight: FontWeight.bold,
+          # //         fontFamily: 'MyCustomFont',
+          # //       ),
+          # //     ),
+          # //   ),
+          # // ),
+          # //
+          # // THIS IS MY CDL BUTTON BELOW
+
+

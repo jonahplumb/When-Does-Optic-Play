@@ -9,7 +9,7 @@ import 'package:when_does_optic_play/scump_container.dart';
 import 'package:when_does_optic_play/shop.dart';
 import 'package:when_does_optic_play/central_time_container.dart';
 import 'package:when_does_optic_play/shop_container.dart';
-import 'package:when_does_optic_play/splash_screen.dart';
+import 'package:when_does_optic_play/screens/splash_screen.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'dart:convert';

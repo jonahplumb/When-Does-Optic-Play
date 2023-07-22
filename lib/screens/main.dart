@@ -1,14 +1,14 @@
 import 'dart:ffi';
-import 'package:when_does_optic_play/cdl.dart';
-import 'package:when_does_optic_play/cdl_container.dart';
-import 'package:when_does_optic_play/central_time_text.dart';
-import 'package:when_does_optic_play/eastern_time_container.dart';
-import 'package:when_does_optic_play/pacific_time_container.dart';
-import 'package:when_does_optic_play/scump.dart';
-import 'package:when_does_optic_play/scump_container.dart';
-import 'package:when_does_optic_play/shop.dart';
-import 'package:when_does_optic_play/central_time_container.dart';
-import 'package:when_does_optic_play/shop_container.dart';
+import 'package:when_does_optic_play/widgets/text/cdl.dart';
+import 'package:when_does_optic_play/widgets/containers/cdl_container.dart';
+import 'package:when_does_optic_play/widgets/text/central_time_text.dart';
+import 'package:when_does_optic_play/widgets/containers/eastern_time_container.dart';
+import 'package:when_does_optic_play/widgets/containers/pacific_time_container.dart';
+import 'package:when_does_optic_play/widgets/text/scump.dart';
+import 'package:when_does_optic_play/widgets/containers/scump_container.dart';
+import 'package:when_does_optic_play/widgets/text/shop.dart';
+import 'package:when_does_optic_play/widgets/containers/central_time_container.dart';
+import 'package:when_does_optic_play/widgets/containers/shop_container.dart';
 import 'package:when_does_optic_play/screens/splash_screen.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:firebase_core/firebase_core.dart';
 // import 'firebase_options.dart';
-import 'package:when_does_optic_play/teams_container.dart';
+import 'package:when_does_optic_play/widgets/containers/teams_container.dart';
 
 void main() async {
   await dotenv.load();

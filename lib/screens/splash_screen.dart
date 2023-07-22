@@ -1,5 +1,5 @@
 import 'dart:ffi';
-import 'package:when_does_optic_play/main.dart';
+import 'package:when_does_optic_play/screens/main.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'dart:async';

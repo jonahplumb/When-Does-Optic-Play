@@ -21,6 +21,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:firebase_core/firebase_core.dart';
 // import 'firebase_options.dart';
 import 'package:when_does_optic_play/widgets/containers/teams_container.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
   await dotenv.load();
@@ -74,7 +75,7 @@ class CountdownWidget extends StatefulWidget {
 }
 
 class _CountdownWidgetState extends State<CountdownWidget> {
-  final DateTime _countdown = DateTime.parse("2023-06-30 16:52:00");
+  final DateTime _countdown = DateTime.parse("2023-09-30 16:52:00");
   late Duration _timeLeft;
   late StreamController<Duration> _controller;
   late Stream<Duration> _stream;
@@ -146,7 +147,9 @@ class _CountdownWidgetState extends State<CountdownWidget> {
             Container(
               decoration: const BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage('assets/background-test.jpg'),
+                      // image: AssetImage('assets/background-test.jpg'),
+                      // image: AssetImage('assets/ogla.jpg'),
+                      image: AssetImage('assets/optic-mw2.jpg'),
                       fit: BoxFit.cover)),
             ),
             Column(

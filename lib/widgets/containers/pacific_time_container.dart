@@ -13,18 +13,18 @@ import 'package:when_does_optic_play/widgets/text/cdl.dart';
 import 'package:when_does_optic_play/widgets/text/scump.dart';
 import 'package:when_does_optic_play/widgets/text/shop.dart';
 
-class PacificTimeContainer extends StatelessWidget {
-  const PacificTimeContainer({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 0),
-      child: Container(
-          height: 25,
-          width: MediaQuery.of(context).size.width,
-          // color: Colors.red,
-          child: const PacificTimeText()),
-    );
-  }
-}
+// class PacificTimeContainer extends StatelessWidget {
+//   const PacificTimeContainer({Key? key}) : super(key: key);
+// 
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.only(top: 0),
+//       child: Container(
+//           height: 25,
+//           width: MediaQuery.of(context).size.width,
+//           // color: Colors.red,
+//           child: const PacificTimeText()),
+//     );
+//   }
+// }

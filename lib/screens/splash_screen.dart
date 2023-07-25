@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
         Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/optic-mw2.jpg'),
+                  image: AssetImage('assets/background-test.jpg'),
                   fit: BoxFit.cover)),
         ),
         // Image.asset(

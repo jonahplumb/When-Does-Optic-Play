@@ -10,16 +10,17 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:when_does_optic_play/widgets/text/cdl.dart';
 import 'package:when_does_optic_play/widgets/text/scump.dart';
 import 'package:when_does_optic_play/widgets/text/shop.dart';
+import 'package:when_does_optic_play/screens/home_cod_tab.dart';
 
-class EasternTimeText extends StatelessWidget {
-  const EasternTimeText({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      '${CountdownWidget.estTime} EST',
-      textAlign: TextAlign.center,
-      style: const TextStyle(color: Colors.white, fontSize: 20),
-    );
-  }
-}
+// class EasternTimeText extends StatelessWidget {
+//   const EasternTimeText({Key? key}) : super(key: key);
+// 
+//   @override
+//   Widget build(BuildContext context) {
+//     return Text(
+//       '${CountdownWidget.estTime} EST',
+//       textAlign: TextAlign.center,
+//       style: const TextStyle(color: Colors.white, fontSize: 20),
+//     );
+//   }
+// }

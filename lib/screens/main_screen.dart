@@ -58,7 +58,7 @@ class _MainScreen extends State<MainScreen> {
     return Scaffold(
         bottomNavigationBar: Container(
           // color: Colors.black,
-          color: Colors.grey,
+          color: Colors.grey[900],
           // color: Colors.grey[300],
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
@@ -95,7 +95,7 @@ class _MainScreen extends State<MainScreen> {
         ),
         // backgroundColor: Colors.grey,
         appBar: AppBar(
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.grey[900],
           elevation: 0.0,
         ),
         body: tabs[_currentIndex]);

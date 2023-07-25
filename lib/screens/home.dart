@@ -1,5 +1,7 @@
 import 'dart:ffi';
+import 'package:when_does_optic_play/screens/home_apex_tab.dart';
 import 'package:when_does_optic_play/screens/home_cod_tab.dart';
+import 'package:when_does_optic_play/screens/home_rl_tab.dart';
 import 'package:when_does_optic_play/screens/main.dart';
 import 'package:when_does_optic_play/widgets/text/cdl.dart';
 import 'package:when_does_optic_play/widgets/containers/cdl_container.dart';
@@ -35,12 +37,8 @@ class _HomePage extends State<HomePage> {
   List<String> _chipLabels = ["Call of Duty", "Apex Legends", "Rocket League"];
   final tabs = [
     COD(),
-    Placeholder(
-      color: Colors.green,
-    ),
-    Placeholder(
-      color: Colors.red,
-    ),
+    Apex(),
+    RL(),
   ];
 
   void _onChipSelected(int index) {
@@ -52,7 +50,7 @@ class _HomePage extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.grey[900],
       body: Column(
         children: [
           Row(

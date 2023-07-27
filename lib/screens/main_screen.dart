@@ -25,6 +25,7 @@ import 'package:when_does_optic_play/widgets/containers/teams_container.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:when_does_optic_play/screens/home_cod_tab.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:when_does_optic_play/constants.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -57,17 +58,15 @@ class _MainScreen extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         bottomNavigationBar: Container(
-          // color: Colors.black,
-          color: Colors.grey[900],
-          // color: Colors.grey[300],
+          color: backgroundColor,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
             child: GNav(
                 gap: 8,
                 backgroundColor: Colors.transparent,
-                color: Colors.grey,
-                activeColor: Colors.grey,
-                tabBackgroundColor: Colors.grey.shade800,
+                color: bottomNavIcons,
+                activeColor: bottomNavIcons,
+                tabBackgroundColor: bottomNavActive,
                 padding: EdgeInsets.all(16),
                 mainAxisAlignment: MainAxisAlignment.center,
                 selectedIndex: _currentIndex,
@@ -93,9 +92,9 @@ class _MainScreen extends State<MainScreen> {
                 ]),
           ),
         ),
-        // backgroundColor: Colors.grey,
+        // backgroundColor: Colors.green,
         appBar: AppBar(
-          backgroundColor: Colors.grey[900],
+          backgroundColor: backgroundColor,
           elevation: 0.0,
         ),
         body: tabs[_currentIndex]);

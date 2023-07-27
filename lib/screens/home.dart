@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'package:when_does_optic_play/constants.dart';
 import 'package:when_does_optic_play/screens/home_apex_tab.dart';
 import 'package:when_does_optic_play/screens/home_cod_tab.dart';
 import 'package:when_does_optic_play/screens/home_rl_tab.dart';
@@ -50,7 +51,7 @@ class _HomePage extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: backgroundColor,
       body: Column(
         children: [
           Row(
@@ -66,8 +67,8 @@ class _HomePage extends State<HomePage> {
                   ),
                   selected: _selectedIndex == index,
                   onSelected: (selected) => _onChipSelected(index),
-                  selectedColor: Colors.grey[700],
-                  backgroundColor: Colors.grey[700],
+                  selectedColor: chipSelectedColor,
+                  backgroundColor: chipBackgroundColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
                         16.0), // Adjust the value to change the chip's border radius

@@ -92,10 +92,30 @@ class _MainScreen extends State<MainScreen> {
                 ]),
           ),
         ),
-        // backgroundColor: Colors.green,
+        backgroundColor: Colors.green,
         appBar: AppBar(
           backgroundColor: backgroundColor,
+          centerTitle: true,
+          toolbarHeight: 10,
           elevation: 0.0,
+
+          /// Below is a widget Row, with logo and Optic Gaming Text
+          /// If new App bar is wanted with design edit the below
+
+          // title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          //   Padding(
+          //     padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+          //     child: Image.asset(
+          //       'assets/OG.png',
+          //       width: 50,
+          //       height: 50,
+          //     ),
+          //   ),
+          //   Text(
+          //     'Optic Gaming',
+          //     style: TextStyle(fontSize: 22, fontFamily: 'MyCustomFont'),
+          //   )
+          // ]),
         ),
         body: tabs[_currentIndex]);
   }

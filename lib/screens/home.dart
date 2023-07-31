@@ -74,9 +74,8 @@ class _HomePage extends State<HomePage> {
                         16.0), // Adjust the value to change the chip's border radius
                     side: BorderSide(
                       color: _selectedIndex == index
-                          ? Colors.white // Color when chip is selected
-                          : Colors
-                              .transparent, // Color when chip is not selected
+                          ? chipSelectedBorder // Color when chip is selected
+                          : chipBorder, // Color when chip is not selected
                       width: 2.0, // Adjust the value to change the border width
                     ),
                   ),

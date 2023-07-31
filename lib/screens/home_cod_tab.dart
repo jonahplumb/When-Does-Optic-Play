@@ -58,8 +58,8 @@ class COD extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Image.asset(
                           "assets/OPTIC.png",
-                          height: 100,
-                          width: 100,
+                          height: 135,
+                          width: 135,
                         ),
                       ),
                       Padding(
@@ -84,9 +84,9 @@ class COD extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Image.asset(
-                          "assets/TOR.png",
-                          height: 100,
-                          width: 100,
+                          "assets/LAT.png",
+                          height: 135,
+                          width: 135,
                         ),
                       )
                     ],

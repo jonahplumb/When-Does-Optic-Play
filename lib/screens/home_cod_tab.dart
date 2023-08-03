@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'package:when_does_optic_play/widgets/cod_upcoming.dart';
 import 'package:when_does_optic_play/widgets/text/cdl.dart';
 import 'package:when_does_optic_play/widgets/containers/cdl_container.dart';
 import 'package:when_does_optic_play/widgets/text/central_time_text.dart';
@@ -25,7 +26,16 @@ import 'package:when_does_optic_play/widgets/containers/teams_container.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class COD extends StatelessWidget {
-  const COD({Key? key}) : super(key: key);
+  COD({Key? key}) : super(key: key);
+
+  // These values are being hard coded initially
+  // Values will be read from database, once my firebase database is implemented
+
+  List<List<String>> _CodGames = [
+    ['assets/OPTIC.png', 'assets/LAT.png', '7:00 pm', 'Major 1'],
+    ['assets/OPTIC.png', 'assets/BOS.png', '7:00 pm', 'Major 1'],
+    ['assets/OPTIC.png', 'assets/SURGE.png', '7:00 pm', 'Major 1'],
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -109,16 +119,32 @@ class COD extends StatelessWidget {
             ),
             //row
             //listview builder
+            Column(
+              children: [
+                Container(
+                  height: 355,
+                  child: ListView.builder(
+                    itemCount: _CodGames.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: EdgeInsets.all(10),
+                        child: CodUpcomingGames(
+                            opticLogo: _CodGames[index][0],
+                            opponentLogo: _CodGames[index][1],
+                            time: _CodGames[index][2],
+                            event: _CodGames[index][3]),
+                      );
+                    },
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ],
     );
   }
 }
-
-
-
-
 
 
 

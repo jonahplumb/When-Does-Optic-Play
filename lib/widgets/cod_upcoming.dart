@@ -30,10 +30,84 @@ class CodUpcomingGames extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 0),
       child: Container(
-        height: 200,
-        color: Colors.amber,
-        child: Text(" $opticLogo vs $opponentLogo \n $time \n $event"),
+        height: 120,
+        // color: Colors.amber,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    event,
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    textAlign: TextAlign.center,
+                  )
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    opticLogo,
+                    height: 60,
+                    width: 60,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        "vs",
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        time,
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(
+                    opponentLogo,
+                    height: 60,
+                    width: 60,
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
 }
+
+
+
+
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.only(top: 0),
+//       child: Container(
+//         height: 200,
+//         color: Colors.amber,
+//         child: Text(" $opticLogo vs $opponentLogo \n $time \n $event"),
+//       ),
+//     );
+//   }
+// }
+
+
+

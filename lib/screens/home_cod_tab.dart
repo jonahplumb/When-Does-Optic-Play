@@ -33,8 +33,8 @@ class COD extends StatelessWidget {
 
   List<List<String>> _CodGames = [
     ['assets/OPTIC.png', 'assets/LAT.png', '7:00 pm', 'Major 1'],
-    ['assets/OPTIC.png', 'assets/BOS.png', '7:00 pm', 'Major 1'],
-    ['assets/OPTIC.png', 'assets/SURGE.png', '7:00 pm', 'Major 1'],
+    ['assets/OPTIC.png', 'assets/BOS.png', '3:00 pm', 'Major 1'],
+    ['assets/OPTIC.png', 'assets/SURGE.png', '9:00 pm', 'Major 1'],
   ];
 
   @override

@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'package:when_does_optic_play/constants.dart';
 import 'package:when_does_optic_play/screens/splash_screen.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -41,7 +42,7 @@ class CodUpcomingGames extends StatelessWidget {
                 children: [
                   Text(
                     event,
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    style: TextStyle(color: Colors.black, fontSize: 16),
                     textAlign: TextAlign.center,
                   )
                 ],
@@ -54,8 +55,8 @@ class CodUpcomingGames extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Image.asset(
                     opticLogo,
-                    height: 60,
-                    width: 60,
+                    height: 50,
+                    width: 50,
                   ),
                 ),
                 Padding(
@@ -63,13 +64,13 @@ class CodUpcomingGames extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        "vs",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        time,
+                        style: TextStyle(color: Colors.black, fontSize: 16),
                         textAlign: TextAlign.center,
                       ),
                       Text(
-                        time,
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        "vs",
+                        style: TextStyle(color: Colors.black, fontSize: 16),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -79,8 +80,8 @@ class CodUpcomingGames extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Image.asset(
                     opponentLogo,
-                    height: 60,
-                    width: 60,
+                    height: 50,
+                    width: 50,
                   ),
                 )
               ],

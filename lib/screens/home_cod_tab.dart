@@ -25,6 +25,8 @@ import 'package:when_does_optic_play/screens/main.dart';
 import 'package:when_does_optic_play/widgets/containers/teams_container.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../constants.dart';
+
 class COD extends StatelessWidget {
   COD({Key? key}) : super(key: key);
 
@@ -34,7 +36,9 @@ class COD extends StatelessWidget {
   List<List<String>> _CodGames = [
     ['assets/OPTIC.png', 'assets/LAT.png', '7:00 pm', 'Major 1'],
     ['assets/OPTIC.png', 'assets/BOS.png', '3:00 pm', 'Major 1'],
-    ['assets/OPTIC.png', 'assets/SURGE.png', '9:00 pm', 'Major 1'],
+    ['assets/OPTIC.png', 'assets/SURGE.png', '6:45 pm', 'Major 4'],
+    ['assets/OPTIC.png', 'assets/LAG.png', '11:00 pm', 'Major 5'],
+    ['assets/OPTIC.png', 'assets/NYSL.png', '4:00 pm', 'Champs']
   ];
 
   @override
@@ -48,6 +52,7 @@ class COD extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   // color: Colors.grey[850],
+
                   borderRadius: BorderRadius.all(Radius.circular(16))),
               child: Column(
                 children: [
@@ -55,7 +60,8 @@ class COD extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Countdown",
+                        // "Countdown",
+                        _CodGames[0][3],
                         style: TextStyle(color: Colors.white, fontSize: 38),
                         textAlign: TextAlign.center,
                       )
@@ -67,7 +73,7 @@ class COD extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Image.asset(
-                          "assets/OPTIC.png",
+                          _CodGames[0][0],
                           height: 135,
                           width: 135,
                         ),
@@ -83,7 +89,7 @@ class COD extends StatelessWidget {
                               textAlign: TextAlign.center,
                             ),
                             Text(
-                              "7:00 pm",
+                              _CodGames[0][2],
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
                               textAlign: TextAlign.center,
@@ -94,7 +100,7 @@ class COD extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Image.asset(
-                          "assets/LAT.png",
+                          _CodGames[0][1],
                           height: 135,
                           width: 135,
                         ),
@@ -124,15 +130,15 @@ class COD extends StatelessWidget {
                 Container(
                   height: 355,
                   child: ListView.builder(
-                    itemCount: _CodGames.length,
+                    itemCount: _CodGames.length - 1,
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: EdgeInsets.all(10),
                         child: CodUpcomingGames(
-                            opticLogo: _CodGames[index][0],
-                            opponentLogo: _CodGames[index][1],
-                            time: _CodGames[index][2],
-                            event: _CodGames[index][3]),
+                            opticLogo: _CodGames[index + 1][0],
+                            opponentLogo: _CodGames[index + 1][1],
+                            time: _CodGames[index + 1][2],
+                            event: _CodGames[index + 1][3]),
                       );
                     },
                   ),

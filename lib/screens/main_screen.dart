@@ -49,6 +49,9 @@ class _MainScreen extends State<MainScreen> {
     ),
     Placeholder(
       color: Colors.orange,
+    ),
+    Placeholder(
+      color: Colors.blue,
     )
   ];
   // Tracking the current tab a user is on
@@ -62,7 +65,7 @@ class _MainScreen extends State<MainScreen> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
             child: GNav(
-                gap: 8,
+                gap: 4,
                 backgroundColor: Colors.transparent,
                 color: bottomNavIcons,
                 activeColor: bottomNavIcons,
@@ -81,20 +84,24 @@ class _MainScreen extends State<MainScreen> {
                     text: 'Home',
                   ),
                   GButton(
-                    icon: Icons.link,
-                    text: 'Links',
+                    icon: Icons.quiz_rounded,
+                    text: 'Trivia',
                   ),
                   GButton(
-                    icon: Icons.show_chart,
-                    text: 'Portfolio',
+                    icon: Icons.photo,
+                    text: 'Memories',
                   ),
-                  GButton(icon: Icons.settings, text: 'Settings')
+                  GButton(icon: Icons.groups_sharp, text: 'Players'),
+                  GButton(icon: Icons.link, text: 'Links')
                 ]),
           ),
         ),
-        backgroundColor: Colors.green,
+        // backgroundColor: Colors.green,
         appBar: AppBar(
           backgroundColor: backgroundColor,
+          // flexibleSpace: Container(
+          //   decoration: gradientColors,
+          // ),
           centerTitle: true,
           toolbarHeight: 10,
           elevation: 0.0,

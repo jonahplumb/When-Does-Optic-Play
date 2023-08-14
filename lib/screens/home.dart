@@ -54,32 +54,36 @@ class _HomePage extends State<HomePage> {
       backgroundColor: backgroundColor,
       body: Column(
         children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                _chipLabels.length,
-                (index) => Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: ChoiceChip(
-                    label: Text(
-                      _chipLabels[index],
-                      style: TextStyle(color: Colors.grey[350], fontSize: 14),
-                    ),
-                    selected: _selectedIndex == index,
-                    onSelected: (selected) => _onChipSelected(index),
-                    selectedColor: chipSelectedColor,
-                    backgroundColor: chipBackgroundColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                          16.0), // Adjust the value to change the chip's border radius
-                      side: BorderSide(
-                        color: _selectedIndex == index
-                            ? chipSelectedBorder // Color when chip is selected
-                            : chipBorder, // Color when chip is not selected
-                        width:
-                            2.0, // Adjust the value to change the border width
+          Container(
+            width: MediaQuery.of(context).size.width,
+            decoration: gradientColors,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  _chipLabels.length,
+                  (index) => Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: ChoiceChip(
+                      label: Text(
+                        _chipLabels[index],
+                        style: TextStyle(color: Colors.grey[350], fontSize: 14),
+                      ),
+                      selected: _selectedIndex == index,
+                      onSelected: (selected) => _onChipSelected(index),
+                      selectedColor: chipSelectedColor,
+                      backgroundColor: chipBackgroundColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                            16.0), // Adjust the value to change the chip's border radius
+                        side: BorderSide(
+                          color: _selectedIndex == index
+                              ? chipSelectedBorder // Color when chip is selected
+                              : chipBorder, // Color when chip is not selected
+                          width:
+                              2.0, // Adjust the value to change the border width
+                        ),
                       ),
                     ),
                   ),

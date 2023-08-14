@@ -62,11 +62,13 @@ class _MainScreen extends State<MainScreen> {
     return Scaffold(
         bottomNavigationBar: Container(
           color: backgroundColor,
+          // color: Colors.amber,
+          // decoration: gradientColors,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             child: GNav(
                 gap: 4,
-                backgroundColor: Colors.transparent,
+                backgroundColor: Color.fromARGB(0, 80, 74, 74),
                 color: bottomNavIcons,
                 activeColor: bottomNavIcons,
                 tabBackgroundColor: bottomNavActive,
@@ -99,9 +101,9 @@ class _MainScreen extends State<MainScreen> {
         // backgroundColor: Colors.green,
         appBar: AppBar(
           backgroundColor: backgroundColor,
-          // flexibleSpace: Container(
-          //   decoration: gradientColors,
-          // ),
+          flexibleSpace: Container(
+            decoration: gradientColors,
+          ),
           centerTitle: true,
           toolbarHeight: 10,
           elevation: 0.0,

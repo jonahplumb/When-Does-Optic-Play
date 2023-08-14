@@ -49,10 +49,10 @@ class COD extends StatelessWidget {
           children: [
             Container(
               height: 250,
+              // height: MediaQuery.of(context).size.height / 3.5,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   // color: Colors.grey[850],
-
                   borderRadius: BorderRadius.all(Radius.circular(16))),
               child: Column(
                 children: [
@@ -128,17 +128,28 @@ class COD extends StatelessWidget {
             Column(
               children: [
                 Container(
-                  height: 355,
+                  height: 360,
                   child: ListView.builder(
                     itemCount: _CodGames.length - 1,
                     itemBuilder: (context, index) {
-                      return Padding(
-                        padding: EdgeInsets.all(10),
-                        child: CodUpcomingGames(
-                            opticLogo: _CodGames[index + 1][0],
-                            opponentLogo: _CodGames[index + 1][1],
-                            time: _CodGames[index + 1][2],
-                            event: _CodGames[index + 1][3]),
+                      return Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(10),
+                            child: CodUpcomingGames(
+                                opticLogo: _CodGames[index + 1][0],
+                                opponentLogo: _CodGames[index + 1][1],
+                                time: _CodGames[index + 1][2],
+                                event: _CodGames[index + 1][3]),
+                          ),
+                          if (index < _CodGames.length - 2)
+                            Divider(
+                              color: Colors.black,
+                              thickness: 1,
+                              indent: 35,
+                              endIndent: 35,
+                            )
+                        ],
                       );
                     },
                   ),

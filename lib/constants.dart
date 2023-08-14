@@ -28,11 +28,11 @@ const Color chipSelectedBorder = Colors.white;
 // const Color chipSelectedBorder = Color(0xFFa5e65a);
 
 // const Color chiptestgreen = Color(0xFFa5e65a);
-const Color chiptestgreen = Color.fromARGB(192, 165, 230, 90);
+const Color chiptestgreen = Color.fromARGB(255, 165, 230, 90);
 const Color chipBorder = Colors.transparent;
 
 const BoxDecoration gradientColors = BoxDecoration(
     gradient: LinearGradient(
         colors: [Color(0xFFD7D4D3), chiptestgreen],
-        begin: Alignment.topRight,
-        end: Alignment.bottomLeft));
+        begin: Alignment.centerRight,
+        end: Alignment.centerLeft));

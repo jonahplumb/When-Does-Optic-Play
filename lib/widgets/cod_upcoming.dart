@@ -31,12 +31,13 @@ class CodUpcomingGames extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 0),
       child: Container(
-        height: 120,
+        height: 70,
+        // height:MediaQuery.of(context).size.height / 3.5,
         // color: Colors.amber,
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(bottom: 8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -52,24 +53,24 @@ class CodUpcomingGames extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(4.0),
                   child: Image.asset(
                     opticLogo,
-                    height: 50,
-                    width: 50,
+                    height: 30,
+                    width: 30,
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                   child: Column(
                     children: [
                       Text(
-                        time,
+                        "vs",
                         style: TextStyle(color: Colors.black, fontSize: 16),
                         textAlign: TextAlign.center,
                       ),
                       Text(
-                        "vs",
+                        time,
                         style: TextStyle(color: Colors.black, fontSize: 16),
                         textAlign: TextAlign.center,
                       ),
@@ -77,11 +78,11 @@ class CodUpcomingGames extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(4.0),
                   child: Image.asset(
                     opponentLogo,
-                    height: 50,
-                    width: 50,
+                    height: 30,
+                    width: 30,
                   ),
                 )
               ],
